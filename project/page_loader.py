@@ -31,8 +31,8 @@ def formatter(string):
     for elem in replace_list:
         string = string.replace(elem, '-')
     return (string + '.html')
-    
 
-url_1 = 'http://ru.hexlet.io/courses'
-url = '/home/ovechka/python-project-51/tests/fixtures/download.html'
-download(url)
+
+# url = '/home/ovechka/python-project-51/tests/fixtures/download.html'
+if __name__ == "__main__":
+    download()
