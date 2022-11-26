@@ -17,7 +17,7 @@ def download(url, save_dir=current_dir):
     f = open(f'{save_url}', 'w')
     f.write(f'{result}')
     f.close()
-    print(f)
+
 
 
 def formatter(string):
