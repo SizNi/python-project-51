@@ -19,7 +19,6 @@ def download(url, save_dir=current_dir):
     f.close()
 
 
-
 def formatter(string):
     # обрезаем https/http
     replace_list = ['.', '/', '%', '_']

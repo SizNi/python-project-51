@@ -1,9 +1,9 @@
 import tempfile
 import os
-from project.page_loader import download
+from page_loader.html_download import download
 
 
-def test_download():
+def test_html_download():
     current_dir = os.getcwd()
     url = f'{current_dir}/tests/fixtures/download.html'
     with tempfile.TemporaryDirectory() as tmp:

@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Nik Sizov <wwwwwwwww@list.ru>"]
 readme = "README.md"
-packages = [{include = "project"}]
+packages = [{include = "page_loader"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -12,7 +12,7 @@ pyyaml = "^6.0"
 pytest-cov = "^4.0.0"
 
 [tool.poetry.scripts]
-page-loader = "project.app:main"
+page-loader = "page_loader.app:main"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
