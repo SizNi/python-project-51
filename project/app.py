@@ -1,5 +1,5 @@
 import argparse
-from page_loader import download
+from project.page_loader import download
 import os
 
 
