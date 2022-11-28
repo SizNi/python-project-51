@@ -1,6 +1,6 @@
 def formatter(string):
     # обрезаем https/http
-    replace_list = ['.', '/', '%', '_',]
+    replace_list = ['.', '/', '%', '_']
     if string[:5] == 'https':
         string = string[8:]
     elif string[:5] == 'http:':

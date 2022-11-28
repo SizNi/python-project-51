@@ -21,7 +21,5 @@ def download(url, save_dir=current_dir):
     img_downloader(save_dir, file_name)
 
 
-# if __name__ == "__main__":
-    # download()
-
-download('https://www.geeksforgeeks.org/python-pil-image-convert-method/')
+if __name__ == "__main__":
+    download()
