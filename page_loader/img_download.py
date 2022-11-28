@@ -16,7 +16,6 @@ def img_downloader(html_way, file_name):
     if not os.path.isdir(f'{html_way}/{file_name}_files'):
         os.mkdir(f'{html_way}/{file_name}_files')
     save_folder = f'{html_way}/{file_name}_files'
-    print(html_way)
     # открываем ранее скачанный файл для супа
     html_file = open(f'{html_way}/{file_name}.html')
     soup = BeautifulSoup(html_file, 'html.parser')
