@@ -1,5 +1,7 @@
 import os
 import requests
+from page_loader.img_download import img_downloader
+from page_loader.support_func import formatter
 
 
 # отталкиваемся везде от текущей директории
@@ -11,25 +13,15 @@ def download(url, save_dir=current_dir):
     result = requests.get(url)
     result = result.text
     file_name = formatter(url)
-    save_url = save_dir + '/' + file_name
+    full_file_name = file_name + '.html'
+    save_url = save_dir + '/' + full_file_name
     f = open(f'{save_url}', 'w')
     f.write(f'{result}')
     f.close()
+    img_downloader(save_dir, file_name)
 
 
-def formatter(string):
-    # обрезаем https/http
-    replace_list = ['.', '/', '%', '_', ':']
-    if string[:5] == 'https':
-        string = string[8:]
-    elif string[:5] == 'http:':
-        string = string[7:]
-    # заменяет лишние элементы в url и добавляет .html
-    for elem in replace_list:
-        string = string.replace(elem, '-')
-    print(string + '.html')
-    return (string + '.html')
+# if __name__ == "__main__":
+    # download()
 
-
-if __name__ == "__main__":
-    download()
+download('https://www.geeksforgeeks.org/python-pil-image-convert-method/')
