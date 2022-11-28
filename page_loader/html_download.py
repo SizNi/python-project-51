@@ -18,7 +18,7 @@ def download(url, save_dir=current_dir):
     f = open(f'{save_url}', 'w')
     f.write(f'{result}')
     f.close()
-    img_downloader(save_dir, file_name)
+    img_downloader(save_dir, file_name, url)
 
 
 if __name__ == "__main__":
