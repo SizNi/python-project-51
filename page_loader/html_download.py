@@ -21,5 +21,7 @@ def download(url, save_dir=current_dir):
     img_downloader(save_dir, file_name, url)
 
 
-if __name__ == "__main__":
-    download()
+#if __name__ == "__main__":
+    #download()
+
+download('https://ru.hexlet.io/courses')
